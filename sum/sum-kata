@@ -1,0 +1,15 @@
+function sumTwoSmallestNumbers(numbers) { 
+  let tempa = numbers[0];
+  let tempb = numbers[1];
+  
+  for (let i = 2; i < numbers.length; i++){
+    if (numbers[i] < tempa || numbers[i] < tempb){
+      if(tempa < tempb){
+        tempb = numbers[i];
+      }else{
+        tempa = numbers[i];
+      }
+    }
+  }
+  return tempa+tempb;
+}
